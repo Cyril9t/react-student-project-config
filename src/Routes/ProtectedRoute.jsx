@@ -18,7 +18,8 @@ function ProtectedRoutes() {
     const isUserAuthenticated = false;
 
     if (!isUserAuthenticated) {
-        return <Navigate to={PATHS.auth.login} replace />
+        alert("Profile Page Route is protected")
+        return <Navigate to={PATHS.public.home} replace />
     }
 
     return (
